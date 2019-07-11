@@ -1,6 +1,11 @@
 import java.util.Random;
+import java.util.Scanner;
 class Dice{
     public static void main(String[] args){
+	Scanner s = new Scanner(System.in);
+	System.out.println("What your name?");
+	String str = s.nextLine();
+	System.out.println("Hello, "+ str + "!");
 	System.out.println("Rolling the dice...");
 	Random rand = new Random();
 	int i = rand.nextInt(6)%6 + 1;
@@ -8,7 +13,7 @@ class Dice{
 	System.out.println("Die 1: " + i);
 	System.out.println("Die 2: " + j);
 	System.out.println("Total value: " + (i + j));
-	if(i+j >= 7)System.out.println("You won");
-	else System.out.println("You lost");
+	if(i+j >= 7)System.out.println(str + " won!");
+	else System.out.println(str + " lost...");
     }
 }
